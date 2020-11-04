@@ -55,7 +55,7 @@ class rdrview_fulltext extends Plugin
 
 	function hook_prefs_edit_feed($feed_id)
 		{
-		print "<div class=\"dlgSec\">" . __("Newspaper") . "</div>";
+		print "<div class=\"dlgSec\">" . __("Rdrview") . "</div>";
 		print "<div class=\"dlgSecCont\">";
 		$enabled_feeds = $this->host->get($this, "enabled_feeds");
 		if (!is_array($enabled_feeds)) $enabled_feeds = array();
@@ -63,7 +63,7 @@ class rdrview_fulltext extends Plugin
 		$checked = $key !== FALSE ? "checked" : "";
 		print "<hr/><input dojoType=\"dijit.form.CheckBox\" type=\"checkbox\" id=\"rdrview_fulltext_enabled\"
 			name=\"rdrview_fulltext_enabled\"
-			$checked>&nbsp;<label for=\"rdrview_fulltext_enabled\">" . __('Get fulltext via newspaper parser') . "</label>";
+			$checked>&nbsp;<label for=\"rdrview_fulltext_enabled\">" . __('Get fulltext via rdrview parser') . "</label>";
 		print "</div>";
 		}
 
