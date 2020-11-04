@@ -99,7 +99,7 @@ class rdrview_fulltext extends Plugin
 	function process_article($article)
 		{
 		$url = $article['link'];
-		$cmd = "rdrview \"$url\"";
+		$cmd = "rdrview --disable-sandbox -H '$url'";
 		exec('$cmd', $output);
                 $html = trim(implode($output));
                 if (strlen($html) > 0) {
