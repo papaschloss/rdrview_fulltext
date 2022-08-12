@@ -105,6 +105,7 @@ class rdrview_fulltext extends Plugin
                 if (strlen($html) > 0) {
                    $article["content"] = $html;
                 }
+		
 		return $article;
 		}
 
